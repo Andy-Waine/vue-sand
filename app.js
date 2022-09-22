@@ -16,6 +16,15 @@ const app = Vue.createApp({
         },
         toggleShowBooks() {
             this.showBooks = !this.showBooks
+        },
+        handleEvent() {
+            console.log('success  1!')
+        },
+        handleEvent2() {
+            console.log('success  2!')
+        },
+        handleEvent3() {
+            console.log('success  3!')
         }
     }
 })

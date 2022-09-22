@@ -6,11 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue Sandbox</title>
     <script src="https://unpkg.com/vue@3.0.2"></script>
+    <style>
+        .box {
+            padding: 100px 0;
+            width: 400px;
+            text-align: center;
+            background: #ddd;
+            margin: 20px;
+            display: inline-block;
+        }
+    </style>
 </head>
 
 <body>
     <h1>Hello World</h1>
-
+    <div></div>
     <div id="app">
         <div v-if="showBooks">
             <p>{{ title }} - {{ author}} - {{ age }}</p>
@@ -26,6 +36,13 @@
         </button>
 
         <div v-show="showBooks">Currently Showing Books</div>
+
+        <br>
+        <!-- Mouse Events -->
+        <div class="box" @mouseover="handleEvent">mouseover (enter)</div>
+        <div class="box" @mouseleave="handleEvent2">mouseleave</div>
+        <div class="box" @dblclick="handleEvent3">double click</div>
+        <div class="box"></div>
     </div>
     <script src="./app.js"></script>
 </body>
